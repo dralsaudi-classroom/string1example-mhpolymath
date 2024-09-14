@@ -43,18 +43,10 @@ public class String1 {
     }
     public void reverse() {
         //throw new UnsupportedOperationException("reverse() function is not supported yet.");
-        /*
-         *  
-         *for i in str up to half
-         * tmp = str[i]
-         * str[i] = str[size-i]
-         * str [size-i] = tmp
-         */
-
-        for (int i= 0; i <= size/2; i++){
-            char tmp = str[i];
-            str[i] = str[size-i];
-            str [size-i] = tmp;
+        for (int i= 0; i < length()/2; i++){
+            char tmp = getChar(i);
+            str[i] = getChar(length()-i-1);
+            str [length()-i] = tmp;
         }
     }
 }
